@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+body {
+    background-color: #070724;
+    font-family: 'Antonio','Spartan', sans-serif;
+    background-image: url(/src/assets/background-stars.svg);
+}
+
+header {
+    display: flex;
+    height: 5.375em;
+    width: auto;
+    border-bottom: 1px solid #ffffff46;
+}
+
+.header-child1 {
+    width: 50%;
+}
+
+.header-child1 > h2 {
+    margin: 22px 0px 0px 32px;
+    color: #FFFFFF;
+    font-size: 1.75em;
+    font-weight: 500;
+    letter-spacing: -1.05px;
+}
+
+.header-child2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+}
+
+
+.header-child2 > button {
+    background-color: transparent;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+    color: #FFFFFF;
+    font-size: 0.6875em;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+}
+
+.header-child2 > button:hover {
+    cursor: pointer;
+    outline: none;
+    height: 100%;
+}
+
+.btn-mercury:hover {
+    border-top: solid #419EBB
+}
+
+.btn-venus:hover {
+    border-top: solid #EDA249
+}
+
+.btn-earth:hover {
+    border-top: solid #6D2ED5
+}
+
+.btn-mars:hover {
+    border-top: solid #D14C32
+}
+
+.btn-jupiter:hover {
+    border-top: solid #D83A34
+}
+
+.btn-saturn:hover {
+    border-top: solid #CD5120
+}
+
+.btn-uranus:hover {
+    border-top: solid #1EC1A2
+}
+
+.btn-neptune:hover {
+    border-top: solid #2D68F0
+}
