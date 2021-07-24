@@ -12,7 +12,7 @@ export default function PlanetDescription() {
             <p className="overview-source">
                 Source: <a href={Mercury.overview.source}>Wikipedia</a>
                 <i class="fas fa-external-link-square-alt"></i>
-                <ReactArrow className='react-arrow'/>
+                <ReactArrow className='react-arrow' />
             </p>
             <div className="buttons-planet-unique">
                 <button>
