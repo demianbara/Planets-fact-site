@@ -122,7 +122,9 @@ main {
 .main-planet-img {
     width: 68%;
     align-self: center;
-    padding-left: 10.125em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .buttons-planet-unique {
@@ -200,10 +202,10 @@ main {
 }
 
 .main-content-row2 > div {
-    height: 13vh;
+    height: 13%;
     border: 1px solid #ffffff46;
     padding: 3% 8% 3% 2%;
-    margin-top: 8%;
+    margin-top: 6%;
 }
 
 .main-content-row2 p {

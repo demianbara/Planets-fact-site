@@ -1,6 +1,11 @@
-import * as React from 'react';
+import * as React from "react";
 
-export default function Header () {
+export default function Header({setPlanet}) {
+
+
+    const handleClick = (e) => {
+        setPlanet(e.target.innerText.toLowerCase());
+    };
 
     return (
         <header>
@@ -8,14 +13,30 @@ export default function Header () {
                 <h2>THE PLANETS</h2>
             </div>
             <div className="header-child2">
-                <button className="btn-mercury">MERCURY</button>
-                <button className="btn-venus">VENUS</button>
-                <button className="btn-earth">EARTH</button>
-                <button className="btn-mars">MARS</button>
-                <button className="btn-jupiter">JUPITER</button>
-                <button className="btn-saturn">SATURN</button>
-                <button className="btn-uranus">URANUS</button>
-                <button className="btn-neptune">NEPTUNE</button>
+                <button onClick={handleClick} className="btn-mercury">
+                    MERCURY
+                </button>
+                <button onClick={handleClick} className="btn-venus">
+                    VENUS
+                </button>
+                <button onClick={handleClick} className="btn-earth">
+                    EARTH
+                </button>
+                <button onClick={handleClick} className="btn-mars">
+                    MARS
+                </button>
+                <button onClick={handleClick} className="btn-jupiter">
+                    JUPITER
+                </button>
+                <button onClick={handleClick} className="btn-saturn">
+                    SATURN
+                </button>
+                <button onClick={handleClick} className="btn-uranus">
+                    URANUS
+                </button>
+                <button onClick={handleClick} className="btn-neptune">
+                    NEPTUNE
+                </button>
             </div>
         </header>
     );
