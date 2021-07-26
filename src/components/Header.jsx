@@ -1,10 +1,11 @@
 import * as React from "react";
 
-export default function Header({setPlanet}) {
-
+export default function Header({setPlanet, setImgType, setOption}) {
 
     const handleClick = (e) => {
         setPlanet(e.target.innerText.toLowerCase());
+        setImgType('planet')
+        setOption('overview')
     };
 
     return (

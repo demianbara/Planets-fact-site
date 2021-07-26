@@ -1,13 +1,19 @@
 import * as React from "react";
 import { ReactComponent as ReactArrow } from "../assets/external-link-square-alt-solid.svg";
+import planetColor from "../utils/planetColor";
 
 
-export default function PlanetDescription({ planetData, setImgType }) {
-    const [option, setOption] = React.useState("overview");
 
+export default function PlanetDescription({ planetData, setImgType, option, setOption }) {
+    // const [option, setOption] = React.useState("overview");
+    console.log(planetData)
     const handleClick = (e) => {
-        setOption(e.target.value);
+        const {value, name} = e.target;
+        setOption(value);
+        setImgType(name);
     };
+
+    let hexa = planetColor(planetData.name.toLowerCase())
 
     return (
         <div className="main-planet-description">
@@ -19,14 +25,35 @@ export default function PlanetDescription({ planetData, setImgType }) {
                 <ReactArrow className="react-arrow" />
             </p>
             <div className="buttons-planet-unique">
-                <button onClick={handleClick} value="overview">
+                <button
+                    style={{
+                        backgroundColor: option === "overview" ? hexa : null,
+                    }}
+                    onClick={handleClick}
+                    name="planet"
+                    value="overview"
+                >
                     <span>01</span>
                     OVERVIEW
                 </button>
-                <button onClick={handleClick} value="structure">
+                <button
+                    style={{
+                        backgroundColor: option === "structure" ? hexa : null,
+                    }}
+                    onClick={handleClick}
+                    name="internal"
+                    value="structure"
+                >
                     <span>02</span>INTERNAL STRUCTURE
                 </button>
-                <button onClick={handleClick} value="geology">
+                <button
+                    style={{
+                        backgroundColor: option === "geology" ? hexa : null,
+                    }}
+                    onClick={handleClick}
+                    name="geology"
+                    value="geology"
+                >
                     <span>03</span>SURFACE GEOLOGY
                 </button>
             </div>
