@@ -5,8 +5,7 @@ import planetColor from "../utils/planetColor";
 
 
 export default function PlanetDescription({ planetData, setImgType, option, setOption }) {
-    // const [option, setOption] = React.useState("overview");
-    console.log(planetData)
+    
     const handleClick = (e) => {
         const {value, name} = e.target;
         setOption(value);
