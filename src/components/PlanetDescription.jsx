@@ -2,17 +2,19 @@ import * as React from "react";
 import { ReactComponent as ReactArrow } from "../assets/external-link-square-alt-solid.svg";
 import planetColor from "../utils/planetColor";
 
-
-
-export default function PlanetDescription({ planetData, setImgType, option, setOption }) {
-    
+export default function PlanetDescription({
+    planetData,
+    setImgType,
+    option,
+    setOption,
+}) {
     const handleClick = (e) => {
-        const {value, name} = e.target;
+        const { value, name } = e.target;
         setOption(value);
         setImgType(name);
     };
 
-    let hexa = planetColor(planetData.name.toLowerCase())
+    let hexa = planetColor(planetData.name.toLowerCase());
 
     return (
         <div className="main-planet-description">
@@ -24,6 +26,7 @@ export default function PlanetDescription({ planetData, setImgType, option, setO
                 <ReactArrow className="react-arrow" />
             </p>
             <div className="buttons-planet-unique">
+                {/* botones web */}
                 <button
                     style={{
                         backgroundColor: option === "overview" ? hexa : null,
@@ -31,8 +34,9 @@ export default function PlanetDescription({ planetData, setImgType, option, setO
                     onClick={handleClick}
                     name="planet"
                     value="overview"
+                    className="description-button-laptop"
                 >
-                    <span>01</span>
+                    <span className="buttons-numbers">01</span>
                     OVERVIEW
                 </button>
                 <button
@@ -42,8 +46,10 @@ export default function PlanetDescription({ planetData, setImgType, option, setO
                     onClick={handleClick}
                     name="internal"
                     value="structure"
+                    className="description-button-laptop"
                 >
-                    <span>02</span>INTERNAL STRUCTURE
+                    <span className="buttons-numbers">02</span>
+                    <span>INTERNAL</span> STRUCTURE
                 </button>
                 <button
                     style={{
@@ -52,8 +58,53 @@ export default function PlanetDescription({ planetData, setImgType, option, setO
                     onClick={handleClick}
                     name="geology"
                     value="geology"
+                    className="description-button-laptop"
                 >
-                    <span>03</span>SURFACE GEOLOGY
+                    <span className="buttons-numbers">03</span>
+                    <span>SURFACE</span> GEOLOGY
+                </button>
+                {/* //botones movile */}
+                <button
+                    style={{
+                        borderBottom:
+                            option === "overview" ? `5px solid ${hexa}` : null,
+                        color: option === "overview" ? `#ffffff` : null,
+                        backgroundColor: "transparent",
+                    }}
+                    onClick={handleClick}
+                    name="planet"
+                    value="overview"
+                    className="description-button-movile"
+                >
+                    OVERVIEW
+                </button>
+                <button
+                    style={{
+                        borderBottom:
+                            option === "structure" ? `5px solid ${hexa}` : null,
+                        color: option === "structure" ? `#ffffff` : null,
+                        backgroundColor: "transparent",
+                    }}
+                    onClick={handleClick}
+                    name="internal"
+                    value="structure"
+                    className="description-button-movile"
+                >
+                    STRUCTURE
+                </button>
+                <button
+                    style={{
+                        borderBottom:
+                            option === "geology" ? `5px solid ${hexa}` : null,
+                        color: option === "geology" ? `#ffffff` : null,
+                        backgroundColor: "transparent",
+                    }}
+                    onClick={handleClick}
+                    name="geology"
+                    value="geology"
+                    className="description-button-movile"
+                >
+                    SURFACE
                 </button>
             </div>
         </div>
