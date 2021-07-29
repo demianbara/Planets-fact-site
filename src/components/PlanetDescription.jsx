@@ -1,8 +1,10 @@
 import * as React from "react";
 import { ReactComponent as ReactArrow } from "../assets/external-link-square-alt-solid.svg";
 import planetColor from "../utils/planetColor";
+import PlanetSvg from "./PlanetSvg";
 
 export default function PlanetDescription({
+    imgType,
     planetData,
     setImgType,
     option,
@@ -10,21 +12,27 @@ export default function PlanetDescription({
 }) {
     const handleClick = (e) => {
         const { value, name } = e.target;
-        setOption(value);
-        setImgType(name);
+        if (!value || !name) console.error("value missing, please click again");
+        setOption(value ? value : "overview");
+        setImgType(name ? name : "planet");
     };
 
     let hexa = planetColor(planetData.name.toLowerCase());
 
+    console.log("Option", option);
+
     return (
         <div className="main-planet-description">
-            <h1>{planetData.name.toUpperCase()}</h1>
-            <p className="overview-content">{planetData[option].content}</p>
-            <p className="overview-source">
-                Source: <a href={planetData[option].source}>Wikipedia</a>
-                <i class="fas fa-external-link-square-alt"></i>
-                <ReactArrow className="react-arrow" />
-            </p>
+            <div className="overview-mobile">
+                <h1>{planetData.name.toUpperCase()}</h1>
+                <p className="overview-content">{planetData[option].content}</p>
+                <p className="overview-source">
+                    Source: <a href={planetData[option].source}>Wikipedia</a>
+                    <i class="fas fa-external-link-square-alt"></i>
+                    <ReactArrow className="react-arrow" />
+                </p>
+            </div>
+            <PlanetSvg.Mobile imgType={imgType} planetData={planetData} />
             <div className="buttons-planet-unique">
                 {/* botones web */}
                 <button

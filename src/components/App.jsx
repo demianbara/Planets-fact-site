@@ -7,8 +7,20 @@ export default function App() {
     const [planet, setPlanet] = React.useState("mercury");
     const [imgType, setImgType] = React.useState("planet");
     const [option, setOption] = React.useState("overview");
+    const [menu, setMenu] = React.useState(false);
 
-    let [planetData] = json.filter(p => p.name.toLowerCase() === planet)
+
+    const handleClick = (e) => {
+        setPlanet(e.target.innerText.toLowerCase());
+        setImgType("planet");
+        setOption("overview");
+    };
+
+    const handleMenuState = () => {
+        setMenu(!menu);
+    };
+
+    let [planetData] = json.filter((p) => p.name.toLowerCase() === planet);
 
     return (
         <div>
@@ -16,14 +28,22 @@ export default function App() {
                 setPlanet={setPlanet}
                 setImgType={setImgType}
                 setOption={setOption}
+                setMenu={setMenu}
+                menu={menu}
+                handleClick={handleClick}
+                handleMenuState={handleMenuState}
             />
-            <Content
-                planetData={planetData}
-                imgType={imgType}
-                setImgType={setImgType}
-                option={option}
-                setOption={setOption}
-            />
+            {!menu ? (
+                <Content.Main
+                    planetData={planetData}
+                    imgType={imgType}
+                    setImgType={setImgType}
+                    option={option}
+                    setOption={setOption}
+                />
+            ) : (
+                <Content.MenuMobileOn handleClick={handleClick} />
+            )}
         </div>
     );
 }
