@@ -9,13 +9,13 @@ export default function PlanetDescription({
     setImgType,
     option,
     setOption,
+    handleClick,
 }) {
-    const handleClick = (e) => {
-        const { value, name } = e.target;
-        if (!value || !name) console.error("value missing, please click again");
-        setOption(value ? value : "overview");
-        setImgType(name ? name : "planet");
-    };
+    // const handleClick = (e) => {
+    //     const { value, name } = e.target;
+    //     setOption(value ? value : "overview");
+    //     setImgType(name ? name : "planet");
+    // };
 
     let hexa = planetColor(planetData.name.toLowerCase());
 

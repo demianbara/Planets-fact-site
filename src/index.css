@@ -218,9 +218,9 @@ main {
 
 .main-content-row2 > div {
     height: 14vh;
-    width: 14vw;
+    width: auto;
     border: 1px solid #ffffff46;
-    padding: 2em 2em 2em 1em;
+    padding: 2em 4em 2em 1em;
 }
 
 .main-content-row2 p {

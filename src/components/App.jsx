@@ -27,6 +27,12 @@ export default function App() {
         setMenu(!menu);
     };
 
+     const handleClickPlanet = (e) => {
+         const { value, name } = e.target;
+         setOption(value ? value : "overview");
+         setImgType(name ? name : "planet");
+     };
+
     let [planetData] = json.filter((p) => p.name.toLowerCase() === planet);
 
     return (
@@ -47,6 +53,7 @@ export default function App() {
                     setImgType={setImgType}
                     option={option}
                     setOption={setOption}
+                    handleClickPlanet={handleClickPlanet}
                 />
             ) : (
                 <Content.MenuMobileOn handleClick={handleClickMobile} />
