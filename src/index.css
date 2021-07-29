@@ -380,31 +380,48 @@ main {
         margin-right: 5vw;
     }
 
-   .header-child2-mobile svg {
-       fill: #97979770;
-       border-radius: 2px;
-   }
-   .header-child2-mobile rect {
-       border-radius: 2px;
-   }
-   .header-child2-mobile button {
-       background-color: transparent;
-       border: none;
-       outline: none;
-   }
+    .header-child2-mobile svg {
+        fill: #97979770;
+        border-radius: 2px;
+    }
+    .header-child2-mobile rect {
+        border-radius: 2px;
+    }
+    .header-child2-mobile button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+    }
 
-   .content-mobile {
-       display: flex;
-       flex-direction: column;
-       height: 94vh;
-   }
+    .buttons-planet-unique {
+        padding-left: 5vw;
+    }
 
-   .content-mobile button {
-       background-color: transparent;
-       color: #ffffff;
-       font-family: 'spartan', sans-serif;
-       font-weight: 700;
-       border: none;
-       outline: none;
-   }
+    .content-mobile {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 94vh;
+    }
+
+    .content-mobile button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+        background-color: transparent;
+        color: #ffffff;
+        font-family: "spartan", sans-serif;
+        font-weight: 700;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #97979749;
+    }
+
+    .content-mobile div {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
 }

@@ -16,6 +16,13 @@ export default function App() {
         setOption("overview");
     };
 
+    const handleClickMobile = (e) => {
+        setPlanet(e.target.innerText.toLowerCase());
+        setImgType("planet");
+        setOption("overview");
+        handleMenuState()
+    };
+
     const handleMenuState = () => {
         setMenu(!menu);
     };
@@ -42,7 +49,7 @@ export default function App() {
                     setOption={setOption}
                 />
             ) : (
-                <Content.MenuMobileOn handleClick={handleClick} />
+                <Content.MenuMobileOn handleClick={handleClickMobile} />
             )}
         </div>
     );
