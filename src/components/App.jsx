@@ -29,8 +29,8 @@ export default function App() {
 
      const handleClickPlanet = (e) => {
          const { value, name } = e.target;
-         setOption(value ? value : "overview");
-         setImgType(name ? name : "planet");
+         setOption(value);
+         setImgType(name);
      };
 
     let [planetData] = json.filter((p) => p.name.toLowerCase() === planet);

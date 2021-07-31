@@ -9,17 +9,16 @@ export default function PlanetDescription({
     setImgType,
     option,
     setOption,
-    handleClick,
+    // handleClick,
 }) {
-    // const handleClick = (e) => {
-    //     const { value, name } = e.target;
-    //     setOption(value ? value : "overview");
-    //     setImgType(name ? name : "planet");
-    // };
+    const handleClick = (e) => {
+        const { value, name } = e.target;
+        setOption(value);
+        setImgType(name);
+    };
 
     let hexa = planetColor(planetData.name.toLowerCase());
 
-    console.log("Option", option);
 
     return (
         <div className="main-planet-description">
@@ -28,7 +27,7 @@ export default function PlanetDescription({
                 <p className="overview-content">{planetData[option].content}</p>
                 <p className="overview-source">
                     Source: <a href={planetData[option].source}>Wikipedia</a>
-                    <i class="fas fa-external-link-square-alt"></i>
+                    <i className="fas fa-external-link-square-alt"></i>
                     <ReactArrow className="react-arrow" />
                 </p>
             </div>
@@ -57,7 +56,7 @@ export default function PlanetDescription({
                     className="description-button-laptop"
                 >
                     <span className="buttons-numbers">02</span>
-                    <span>INTERNAL</span> STRUCTURE
+                    INTERNAL STRUCTURE
                 </button>
                 <button
                     style={{
@@ -69,7 +68,7 @@ export default function PlanetDescription({
                     className="description-button-laptop"
                 >
                     <span className="buttons-numbers">03</span>
-                    <span>SURFACE</span> GEOLOGY
+                    SURFACE GEOLOGY
                 </button>
                 {/* //botones movile */}
                 <button
