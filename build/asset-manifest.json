@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.51bc5f65.chunk.css",
-    "main.js": "/static/js/main.6700091e.chunk.js",
-    "main.js.map": "/static/js/main.6700091e.chunk.js.map",
+    "main.css": "/static/css/main.d9414803.chunk.css",
+    "main.js": "/static/js/main.076c0061.chunk.js",
+    "main.js.map": "/static/js/main.076c0061.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5d441852.js",
     "runtime-main.js.map": "/static/js/runtime-main.5d441852.js.map",
     "static/js/2.a746789d.chunk.js": "/static/js/2.a746789d.chunk.js",
     "static/js/2.a746789d.chunk.js.map": "/static/js/2.a746789d.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.51bc5f65.chunk.css.map": "/static/css/main.51bc5f65.chunk.css.map",
+    "static/css/main.d9414803.chunk.css.map": "/static/css/main.d9414803.chunk.css.map",
     "static/js/2.a746789d.chunk.js.LICENSE.txt": "/static/js/2.a746789d.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/background-stars.f6233a6a.svg",
     "static/media/external-link-square-alt-solid.0ec75cc7.svg": "/static/media/external-link-square-alt-solid.0ec75cc7.svg",
@@ -17,7 +17,7 @@
   "entrypoints": [
     "static/js/runtime-main.5d441852.js",
     "static/js/2.a746789d.chunk.js",
-    "static/css/main.51bc5f65.chunk.css",
-    "static/js/main.6700091e.chunk.js"
+    "static/css/main.d9414803.chunk.css",
+    "static/js/main.076c0061.chunk.js"
   ]
 }
