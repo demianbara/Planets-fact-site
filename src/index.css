@@ -9,9 +9,8 @@
     background-color: #070724;
     font-family: "Antonio", "Spartan", sans-serif;
     background-image: url(/src/assets/background-stars.svg);
-    height: 100vh;
-    width: 100vw;
-    min-width: 320px;
+    min-height: 100vh;
+    width: 100%;
 }
 
 header {
@@ -24,11 +23,11 @@ header {
 main {
     display: flex;
     /* height: 92%; */
-    margin: 100%;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 8vh 12% 5% 12%;
+    margin: 8vh 12% 0% 12%;
+    height: auto;
 }
 
 .header-child1 {
@@ -109,7 +108,7 @@ main {
 
 .main-content-row1 {
     display: flex;
-    height: 56vh;
+    height: auto;
     width: auto;
     justify-content: space-between;
 }
@@ -122,7 +121,17 @@ main {
 }
 
 .main-planet-img {
-    width: 68%;
+    width: 40vw;
+    height: 50vh;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.planet {
+    max-width: 40vw;
+    max-height: 50vh;
     align-self: center;
     display: flex;
     justify-content: center;
@@ -171,9 +180,9 @@ main {
 .description-button-movile {
     border: 1px solid #ffffff46;
     background: transparent;
-    height: 4em;
+    height: 5em;
     margin: 2% 0%;
-    padding-top: 1.5%;
+    padding: 1em;
     color: #ffffff;
     text-align: start;
     font-family: "Spartan", sans-serif;
@@ -214,13 +223,17 @@ main {
     justify-content: space-between;
     width: 100%;
     margin-top: 8vh;
+    margin-bottom: 4vh;
 }
 
 .main-content-row2 > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 14vh;
-    width: auto;
+    width: 20%;
     border: 1px solid #ffffff46;
-    padding: 2em 4em 2em 1em;
+    padding: 1.5em 2.5em 1.5em 1em;
 }
 
 .main-content-row2 p {
@@ -235,7 +248,7 @@ main {
 .main-content-row2 h2 {
     font-family: "Antonio", sans-serif;
     font-weight: 500;
-    font-size: 2.5em;
+    font-size: 2.2em;
     color: #ffffff;
     letter-spacing: -1.5px;
 }
@@ -355,6 +368,7 @@ main {
     .main-content-row2 div {
         padding: 0px;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         margin: 2% 0%;
     }
@@ -437,6 +451,10 @@ main {
         align-items: center;
     }
 
+    main {
+        margin: 2vh 6vw 2vh 6vw;
+    }
+
     .header-child1 {
          /* display: flex; */
         justify-content: center;
@@ -464,6 +482,10 @@ main {
         width: auto;
         height: 25vh;
         gap: 10vw;
+    }
+
+    .main-planet-description h1 {
+        font-size: 3em;
     }
 
     .overview-mobile {
@@ -497,11 +519,14 @@ main {
     }
 
     .main-content-row2 h2 {
-        font-size: 1.7em;
+        font-size: 1.5em;
     }
 
     .main-content-row2 div {
-        padding: 1.5rem 2.5rem 1.5rem 1.5rem;
+        padding: 0.8em 1.2em 1em 0.5em;
         height: auto;
     }
+
 }
+
+
