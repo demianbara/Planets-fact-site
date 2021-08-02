@@ -43,8 +43,7 @@ export default function PlanetDescription({
                     value="overview"
                     className="description-button-laptop"
                 >
-                    <span className="buttons-numbers">01</span>
-                    OVERVIEW
+                    01 - OVERVIEW
                 </button>
                 <button
                     style={{
@@ -55,8 +54,7 @@ export default function PlanetDescription({
                     value="structure"
                     className="description-button-laptop"
                 >
-                    <span className="buttons-numbers">02</span>
-                    INTERNAL STRUCTURE
+                     02 - INTERNAL STRUCTURE
                 </button>
                 <button
                     style={{
@@ -67,8 +65,7 @@ export default function PlanetDescription({
                     value="geology"
                     className="description-button-laptop"
                 >
-                    <span className="buttons-numbers">03</span>
-                    SURFACE GEOLOGY
+                    03 - SURFACE GEOLOGY
                 </button>
                 {/* //botones movile */}
                 <button
